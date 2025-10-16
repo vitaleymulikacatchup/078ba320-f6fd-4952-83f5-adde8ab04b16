@@ -6,7 +6,12 @@ import SplitAbout from '@/components/sections/about/SplitAbout';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 
-const assetMap: { id: string; url: string; alt?: string }[] = /* provided JSON array */;
+const assetMap: { id: string; url: string; alt?: string }[] = [
+  { id: "heroImage", url: "https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "A mouthwatering slice of pepperoni pizza with cheese and spices, ideal for any meal."},
+  { id: "aboutImage", url: "https://images.pexels.com/photos/6188305/pexels-photo-6188305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "A young couple having milkshakes and pizza at a cozy cafe. Relaxed and joyful atmosphere."},
+  { id: "contactImage", url: "https://images.pexels.com/photos/18429326/pexels-photo-18429326.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Outdoor sign displaying Korean and Japanese dining options, providing clear guidance."}
+];
+
 const heroImage = assetMap.find(a => a.id === "heroImage")?.url || "/public/images/placeholder.webp";
 const aboutImage = assetMap.find(a => a.id === "aboutImage")?.url || "/public/images/placeholder.webp";
 const contactImage = assetMap.find(a => a.id === "contactImage")?.url || "/public/images/placeholder.webp";
@@ -50,7 +55,7 @@ export default function Home() {
           <SplitAbout
             imageSrc={aboutImage}
             bulletPoints={[
-              { title: "Authentic Recipes", description: "We use traditional methods.", icon: CheckCircle },
+              { title: "Authentic Recipes", description: "We use traditional methods.", icon: "CheckCircle" },
               { title: "Fresh Ingredients", description: "Sourced locally for quality."}
             ]}
             className="bg-red-100"
