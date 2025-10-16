@@ -6,15 +6,10 @@ import SplitAbout from '@/components/sections/about/SplitAbout';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 
-const assetMap: { id: string; url: string; alt?: string }[] = [
-  { id: "heroImage", url: "https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "A mouthwatering slice of pepperoni pizza with cheese and spices, ideal for any meal."},
-  { id: "aboutImage", url: "https://images.pexels.com/photos/6188305/pexels-photo-6188305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "A young couple having milkshakes and pizza at a cozy cafe. Relaxed and joyful atmosphere."},
-  { id: "contactImage", url: "https://images.pexels.com/photos/18429326/pexels-photo-18429326.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Outdoor sign displaying Korean and Japanese dining options, providing clear guidance."}
-];
+const assetMap = [{"id":"heroImage","url":"https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","alt":"A mouthwatering slice of pepperoni pizza with cheese and spices, ideal for any meal."},{"id":"aboutImage","url":"https://images.pexels.com/photos/6188305/pexels-photo-6188305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","alt":"A young couple having milkshakes and pizza at a cozy cafe. Relaxed and joyful atmosphere."},{"id":"contactImage","url":"https://images.pexels.com/photos/18429326/pexels-photo-18429326.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","alt":"Outdoor sign displaying Korean and Japanese dining options, providing clear guidance."}];
 
 const heroImage = assetMap.find(a => a.id === "heroImage")?.url || "/public/images/placeholder.webp";
 const aboutImage = assetMap.find(a => a.id === "aboutImage")?.url || "/public/images/placeholder.webp";
-const contactImage = assetMap.find(a => a.id === "contactImage")?.url || "/public/images/placeholder.webp";
 
 export default function Home() {
   return (
@@ -31,7 +26,7 @@ export default function Home() {
             { name: "About", id: "about" },
             { name: "Contact", id: "contact" }
           ]}
-          brandName={'Pizzeria'} 
+          brandName="Pizzeria" 
         />
       </div>
       <div id="hero" data-section="hero" className="scroll-mt-24"> 
@@ -55,13 +50,13 @@ export default function Home() {
           <SplitAbout
             imageSrc={aboutImage}
             bulletPoints={[
-              { title: "Authentic Recipes", description: "We use traditional methods.", icon: "CheckCircle" },
+              { title: "Authentic Recipes", description: "We use traditional methods.", icon: CheckCircle },
               { title: "Fresh Ingredients", description: "Sourced locally for quality."}
             ]}
             className="bg-red-100"
             contentClassName="text-gray-900"
           /> 
-        </div> 
+        </div>
       </div>
       <div id="contact" data-section="contact" className="scroll-mt-24"> 
         <div className="mx-auto px-4 md:px-6"> 
@@ -81,8 +76,8 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6"> 
           <FooterLogoEmphasis
             columns={[
-              { items: [ { label: "Home", href: "home" }, { label: "Menu", href: "menu" } ] },
-              { items: [ { label: "About", href: "about" }, { label: "Contact", href: "contact" } ] }
+              { items: [{ label: "Home", href: "home" }, { label: "Menu", href: "menu" }] },
+              { items: [{ label: "About", href: "about" }, { label: "Contact", href: "contact" }] }
             ]}
             logoText="Pizzeria"
             className="bg-red-100 text-gray-900"
