@@ -1,6 +1,6 @@
 "use client";
 import { ThemeProvider } from '@/providers/ThemeProvider';
-import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay';
+import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import SplitAbout from '@/components/sections/about/SplitAbout';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
@@ -31,7 +31,7 @@ export default function Home() {
             { name: "About", id: "about" },
             { name: "Contact", id: "contact" }
           ]}
-          brandName={"Pizzeria"} 
+          brandName={'Pizzeria'} 
         />
       </div>
       <div id="hero" data-section="hero" className="scroll-mt-24"> 
